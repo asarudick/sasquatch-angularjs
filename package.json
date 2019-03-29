@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Sasquatch plugin/module for AngularJS analyzers and transforms.",
   "main": "index.js",
+  "repository": "github:asarudick/sasquatch",
   "scripts": {
-    "build": "tsc -p \"./tsconfig.json\"",
-    "test": "npm run build && node ./lib/bin/sasquatch.js -- \"./mock/input.ts\""
+    "build": "tsc -p \"./tsconfig.json\""
   },
+  "bugs": "https://github.com/asarudick/sasquatch-angularjs/issues/",
+  "homepage": "https://github.com/asarudick/sasquatch-angularjs/",
   "keywords": [
     "sasquatch",
     "angularjs",
@@ -16,17 +18,18 @@
     "quality",
     "typescript"
   ],
-  "author": "Asa Rudick",
+  "author": {
+    "name": "Asa Rudick",
+    "url": "https://asarudick.com"
+  },
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.11",
     "sasquatch": "1.0.14",
     "ts-morph": "^1.0.0",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6"
   },
   "devDependencies": {
-    "@types/node": "^11.12.0",
-    "ava": "^1.4.0"
+    "@types/node": "^11.12.0"
   }
 }
