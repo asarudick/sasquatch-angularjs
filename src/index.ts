@@ -1,7 +1,6 @@
-import { Module } from 'sasquatch';
 import * as transforms from './transforms';
 
-export const AngularJsModule: Module = {
+export const AngularJsModule = {
   plugin: {
     transforms,
   },
