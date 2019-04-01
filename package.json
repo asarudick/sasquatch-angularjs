@@ -1,6 +1,6 @@
 {
   "name": "sasquatch-angularjs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sasquatch plugin/module for AngularJS analyzers and transforms.",
   "main": "./lib/index.js",
   "repository": "github:asarudick/sasquatch",
@@ -24,8 +24,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "sasquatch": "1.0.14",
-    "ts-morph": "^1.0.0",
+    "sasquatch": "1.1.4",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6"
   },
