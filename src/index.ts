@@ -1,6 +1,6 @@
 import * as transforms from './transforms';
 
-export const AngularJsModule = {
+export default {
   plugin: {
     transforms,
   },
