@@ -1,31 +1,8 @@
 import services from '../data/angular-services';
+import { Statement } from 'ts-morph';
 
 export default (sources, options) => {
   sources.forEach(source => {
-    // Replace in functions.
-    // const functions = source.getFunctions();
-    //
-    // functions.forEach(f => {
-    //   const body = f.getBody();
-    //   const statements = body.getStatements();
-    //
-    //   // Find ngInject
-    //   const ngInject = statements.find(statement => {
-    //     return statement.getExpression().getText() === "'ngInject'";
-    //   });
-    //
-    //   if (!ngInject) {
-    //     return;
-    //   }
-    //
-    //   ngInject.remove();
-    //
-    //   // Replace param types if ngInject was found.
-    //   const arr = f.getParameters().map(param => param.getName());
-    //   // console.log(ngInject);
-    //   f.addProperty({ isStatic: true, name: '$inject', type: '[]' });
-    // });
-
     const classes = source.getClasses();
 
     classes.forEach(c => {
@@ -35,8 +12,8 @@ export default (sources, options) => {
         const statements = body.getStatements();
 
         // Find ngInject
-        const ngInject = statements.find(statement => {
-          return statement.getExpression().getText() === "'ngInject'";
+        const ngInject = statements.find((statement: Statement) => {
+          return statement.getText().includes("'ngInject'");
         });
 
         if (!ngInject) {

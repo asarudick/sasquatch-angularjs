@@ -1,4 +1,5 @@
 import services from '../data/angular-services';
+import { Statement, Node, SyntaxKind } from 'ts-morph';
 
 export default (sources, options) => {
   sources.forEach(source => {
@@ -9,8 +10,8 @@ export default (sources, options) => {
       const statements = body.getStatements();
 
       // Find ngInject
-      const hasNgInject = statements.some(statement => {
-        return statement.getExpression().getText() === "'ngInject'";
+      const hasNgInject = statements.some((statement: Statement) => {
+        return statement.getText().includes("'ngInject'");
       });
 
       if (!hasNgInject) {
