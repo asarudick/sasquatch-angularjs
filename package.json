@@ -24,7 +24,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "sasquatch": "1.1.8",
+    "sasquatch": "^1.1.13",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6"
   },
