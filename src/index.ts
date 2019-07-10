@@ -6,9 +6,10 @@ export default {
   },
   transforms: {
     use: {
-      AddBuiltInAngularTypes: {},
-      AddBuiltInAngularTypesNgInject: {},
-      ReplaceNgInjectWith$inject: {},
+      // Disabled by default.
+      // AddBuiltInAngularTypes: {},
+      // AddBuiltInAngularTypesNgInject: {},
+      // ReplaceNgInjectWith$inject: {},
     },
   },
 };
